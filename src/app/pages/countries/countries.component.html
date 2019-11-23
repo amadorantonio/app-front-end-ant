@@ -1,0 +1,14 @@
+<div class="card-columns m-3">
+    <div class="card" *ngFor="let country of misDatos">
+        <img src="{{country.flag}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title text-center">{{country.name}} ({{country.nativeName}})</h5>
+        <p class="card-text">Capital: {{country.capital}}</p>
+        <p class="card-text"><small class="text-muted">Población: {{country.population}} habitantes</small></p>
+        <h5 class="text-center">Monedas</h5>
+        <ul class="list-group">
+                <li class="list-group-item" *ngFor="let item of country.currencies">{{item.symbol}} {{item.name}}</li>
+              </ul>
+        </div>
+    </div>
+</div>
